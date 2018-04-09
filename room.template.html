@@ -1,0 +1,14 @@
+    <div class="output">
+        <h2>{{topic}}</h2>
+
+        <ul class="output_list">
+            <li ng-repeat="line in lines" ng-bind-html-unsafe="line">
+            </li>
+        </ul>
+        
+        <form>
+            <input ng-model="sender" class="sender" type="text" value="" placeholder="Name" style="disabled: true;">:
+            <input ng-model="message" class="message" type="text" placeholder="">
+            <button ng-click="send()" class="submit">Submit</button>
+        </form>
+    </div>

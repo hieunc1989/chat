@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Current Chat Rooms</h1>
+<h2>Logged In As: {{user['name']}} (<a href="//logout:logout@{{host}}/">Logout</a>)</h2>
+<ul>
+{% for room in rooms_manager.get_list(prefix='room.') %}
+    {% block room %}
+        <li><a target="{{room[0][5:]}}" href="/room/{{room[0][5:]}}.html">{{ room[0][5:] }}</a> ({{ room[1] }})</li>
+    {% end %}
+{% end %}
+</ul>
+<form onSubmit="if(this.new_room.value) { window.open('/room/' + this.new_room.value + '.html').focus(); return true;} else { return false; }">
+    New Room: <input type="text" name="new_room">
+    <input type="submit" value="Create Room">
+</form>
+</body>
+</html>

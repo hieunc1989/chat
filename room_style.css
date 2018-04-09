@@ -1,0 +1,103 @@
+body {
+    position: inherit;
+    background: #555;
+}
+
+form {
+    background-color: gray;
+    display: block;
+    border: 1px solid black;
+    position: relative;
+    bottom: 0;
+    height: 10%;
+    padding: 10px;
+}
+form input {
+    border: 1px solid silver;
+    background-color: #ccc;
+}
+form .sender {
+    width: 10%;
+}
+form .message {
+    width: 70%;
+}
+form .submit {
+    width: 10%;
+}
+.output_list {
+    position: relative;
+    top: 0;
+    border: 1px solid black;
+    height: 80%;
+    overflow: auto;
+    background-color: #888;
+    box-shadow: 0 0 20px #333 inset;
+}
+.output_list {
+    list-style: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 10px 20px #333;
+}
+.output_list li {
+    display: block;
+    background-color: #ddd;
+    font-family: arial,helvetica,sans-serif;
+}
+.output_list li:nth-child(odd) {
+    display: block;
+    background-color: #bbb;
+}
+
+.output_list li .ts {
+    display: inline-block;
+    width: 80px;
+    padding: 3px;
+    font-size: .70em;
+    font-weight: bold;
+    font-family: fixed;
+    border-right: 1px dotted black;
+}
+
+.output_list li .sender {
+    display: inline-block;
+    width: 100px;
+    overflow: hide;
+    font-size: .75em;
+    font-weight: bold;
+    border-right: 1px dashed black;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-right: 10px;
+}
+
+.output_list li .sender:before {
+    content: "<";
+}
+.output_list li .sender:after {
+    content: ">";
+}
+
+.output_list li span.raw {
+    display: inline-block;
+    width: 70%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: monospace;
+}
+.output_list li span.me {
+    font-style: italic;
+}
+h2 {
+    background-color: black;
+    color: silver;
+    margin: 0;
+    padding: 3px;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid silver;
+    border-bottom: none;
+}

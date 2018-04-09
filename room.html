@@ -1,0 +1,15 @@
+<html ng-app="RabbitornadoApp">
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/room_style.css" />
+        <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <script type="application/javascript" src="/static/room_ctrl.js"></script>
+    </head>
+    
+    <body>
+        <h3>Logged In As: {{user['name']}} (
+            <a href="//logout:logout@{{host}}/">Logout</a>)</h3>
+        <chatroom id="{{room}}">chat goes here</chatroom>
+    </body>
+
+</html>
